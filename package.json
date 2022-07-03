@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/HelenTR7/react-boilerplate#readme",
   "dependencies": {
+    "axios": "^0.27.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-redux": "^7.2.8",
