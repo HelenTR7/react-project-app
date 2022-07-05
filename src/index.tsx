@@ -1,17 +1,18 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import {createRoot} from "react-dom/client";
 import {Provider} from 'react-redux';
 import {BrowserRouter} from "react-router-dom";
 import Layout from "@components/layout";
 import store from "@store/index";
 
-ReactDOM.render(
-  <React.StrictMode>
-      <Provider store={store}>
-          <BrowserRouter>
-              <Layout />
-          </BrowserRouter>
-      </Provider>
-  </React.StrictMode>,
-  document.getElementById("root")
+const container = document.getElementById("root");
+const root = createRoot(container!);
+
+//React.StrictMode - вызывает рендер два раза
+root.render(
+    <BrowserRouter>
+        <Provider store={store}>
+            <Layout />
+        </Provider>
+    </BrowserRouter>
 );
